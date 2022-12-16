@@ -1,0 +1,106 @@
+/* 제목 */
+.bekseju{
+    padding: 195px 0 140px;
+}
+.bekseju h1{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .bekseju h1>span{
+    color: #377B62;
+    font-weight: 700;
+  }
+  .bekseju h1::after{
+    background-color: #377B62;
+  }
+
+
+/* 제품 피규어 */
+#bekseju_fig{
+  max-width: 1188px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+  /* border-top: 1px solid #377B62; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#bekseju_fig>div{
+  width: 50%;
+}
+.bekseju_img{
+  width: 50%; height: 58%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bekseju_img:hover{
+    transform: rotate(5deg);
+    transition-duration: 0.5s;
+}
+figcaption>h4{
+    display: inline;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+    background-color: #F4F4F4;
+    border: 2px solid #3c2121;
+    position: relative;
+    z-index: 1 !important;
+}
+figcaption>h4::after{
+    display: block;
+    content: '';
+    width: 100%; height: 100%;
+    position: absolute;
+    right: -7px;
+    bottom: -7px;
+    background-color: #377B62;
+    border: 2px solid #3c2121;
+    z-index: -1 !important;
+}
+figcaption>p{
+    padding: 30px 20px;
+    font-size: 15px;
+    color: #000;
+    font-weight: 400;
+}
+
+.bekseju_INP{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+#bekseju_fig input[type="button"] {
+  width: 55px; height: 35px;
+  border-radius: 50px;
+  line-height: 35px;
+  background-color: #377B62;
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* 작성 버튼 */
+.bekseju_wBtn_wrap{
+    text-align: end;
+    margin-top: 20px;
+}
+.bekseju_wBtn{
+    width: 55px; height: 35px;
+    border-radius: 50px;
+    line-height: 35px;
+    background-color: #EF7F0F;
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,53 @@
+/* 제목 */
+.bekseju_upDate_wrap{
+    padding: 215px 0 215px;
+    text-align: center;
+  }
+  .bekseju_upDate_wrap h1{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .bekseju_upDate_wrap h1>span{
+    color: #377B62;
+    font-weight: 700;
+  }
+  .bekseju_upDate_wrap h1::after{
+    background-color: #377B62;
+  }
+
+/* 작성 폼 */
+.bekseju_upDate_form{
+    width: 100%;
+
+  }
+  .bekseju_upDate_label{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .bekseju_upDate_form>div{
+    margin-bottom: 10px;
+  }
+  .bekseju_upDate_INP{
+    border-radius: 4px;
+    width: 50%; height: 30px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+  }
+
+  /* 저장 버튼 */
+  .bekseju_upDate_btn{
+    text-align: center;
+  }
+  .bekseju_upDate_btn>input[type="submit"]{
+    width: 55px; height: 35px;
+    border-radius: 50px;
+    line-height: 38px;
+    background-color: #377B62;
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    border: none;
+    margin-top: 50px;
+    cursor: pointer;
+  }
