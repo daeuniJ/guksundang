@@ -1,0 +1,23 @@
+<div class="bekseju_upDate_wrap">
+  <h1 class="w1188"><span>제품 </span>수정페이지</h1>
+<form action="/updatesPd" method="post" enctype="multipart/form-data" class="bekseju_upDate_form w1188">
+  <input type="hidden" name="id" value="<%= row.id %>">
+  <!-- <div>
+    <input type="text" name="product_id" value="<%= row.id %>">
+  </div> -->
+  <div>
+    <label class="bekseju_upDate_label">제목 : </label>
+    <input type="text" name="product_name" value="<%= row.bekseju_name %>" class="bekseju_upDate_INP">
+  </div>
+  <div>
+    <label class="bekseju_upDate_label">가격 : </label>
+    <input type="text" name="product_price" value="<%= row.price %>" class="bekseju_upDate_INP">
+  </div>
+  <div>
+    <input type="file" name="product_img" value="<%= row.img %>" class="bekseju_upDate_INP">
+  </div>
+  <div class="bekseju_upDate_btn">
+    <input type="submit" value="저장">
+  </div>
+</form>
+</div>

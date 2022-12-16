@@ -1,0 +1,25 @@
+
+<div id="newWrite_wrap"  class="w1188" >
+    <table>
+      <% let regisYear =  row.create_time.getFullYear();  %>
+      <% let regisMonth =  row.create_time.getMonth()+1;  %>
+      <% let regisDate =  row.create_time.getDate();  %>
+        <tr>
+            <td class="newWrite_title"><%= row.title %></td>
+          </tr>
+          <tr>
+            <td class="newWrite_date"><%= regisYear %>-<%= regisMonth +1 >= 10 ? regisMonth : '0' + regisMonth %>-<%= regisDate >= 10 ? regisDate : '0' + regisDate %></td>
+          </tr>
+          <tr>
+            <td class="newWrite_writerT">작성자: <%= row.name %></td>
+          </tr>
+          <tr>
+            <td class="newWrite_cont"><%= row.content %></td>
+          </tr>
+    </table>
+    <div id="newWriteBtn_wrap">
+      <input type="submit" value="목록" class="write_btn" onclick="location.href='/noticeList'">
+      <input type="button" value="수정" class="write_btn write_btnBack" onclick="javascript:location.href='/updates?No=<%= row.No %>'">
+      <input type="button" value="삭제" class="write_btn" onclick="javascript:location.href='/deleteN?No=<%= row.No %>'">
+    </div>
+</div>

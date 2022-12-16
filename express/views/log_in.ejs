@@ -1,0 +1,44 @@
+<form action="/logInE" method="post">
+<div id="logIn_wrap">
+  <div class="logInImg_wrap">
+    <div class="logInTitle_img"></div>
+    <div class="logInArrow"></div>
+  </div>
+  <table border="1">
+    <tr>
+      <!-- <td class="logIn_td"><label for="id" class="title">아이디</label></td> -->
+      <td class="logIn_td"><input type="text" name="id" id="id"  class="id_pw idBox" placeholder="아이디"></td>
+    </tr>
+    <tr>
+      <!-- <td class="logIn_td"><label for="pw" class="title">비밀번호</label></td> -->
+      <td class="logIn_td"><input type="password" name="pwd" id="pwd" class="id_pw" placeholder="비밀번호" ></td>
+    </tr>
+    <!-- <tr>
+      <td colspan="2" align="left"  class="id_checkbox"><input type="checkbox"
+          name="idsave" value="saveOk">아이디 저장</td>
+  </tr> -->
+  <tr>
+    <td colspan="2" class="logIn_btn"><input type="submit" value="로그인" id="logIn_check"></td>
+  </tr>
+  </table>
+  <div class="box w1188 idPw_search">
+    <span class="input-wrap">
+      <input type="checkbox" id="checkId" name="checkId">                                         
+      <label for="checkId"><span></span></label>
+      아이디 저장
+    </span>
+    <ul class="find">
+      <li class="idSearch" id="idSearch" style="cursor: hand; cursor: pointer">아이디 찾기</li>
+      <li class="pwSearch" id="pwSearch" style="cursor: hand; cursor: pointer">비밀번호 찾기</li>
+    </ul>
+  </div>
+  <!-- <div class="w1188 idPw_search">
+    <ul>
+      <li><a href="/join">회원가입</a></li>
+      <li><a href="">아이디 찾기</a></li>
+      <li><a href="">비밀번호 찾기</a></li>
+    </ul>
+  </div> -->
+</div>
+</form>
+<script src="js/log_in.js"></script>
