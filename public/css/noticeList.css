@@ -1,0 +1,221 @@
+#notiList_wrap{
+  padding: 195px 0 140px;
+}
+#notiList_wrap>h1{
+  margin: 0 auto;
+  text-align: center;
+  color: #377B62;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+#notiList_wrap h1::after{
+  background-color: #377B62;
+}
+
+/*notiList_top*/
+.notiList_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.notiList_top p{
+  width: 30%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #377B62;
+}
+.notiList_top p>span{
+  font-size: 16px;
+  font-weight: 500;
+  color: #377B62;
+}
+.notiList_topCon{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+select{
+  width: 100px; height: 32px;
+  border: 1px solid #DDDDDD;
+}
+#noti_search{
+  width: 300px; height: 28px;
+  border: 1px solid #DDDDDD;
+  outline: none;
+}
+#noti_search::placeholder{
+  color: #666666;
+}
+#noti_btn{
+  width: 55px; height: 35px;
+  background-color: #EF7F0F;
+  color: #F4F4F4;
+  border-radius: 50px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+
+/* 최신순 과거순 */
+.notiNew_or{
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+}
+.notiPast_or{
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+}
+
+
+/* notiList_middle */
+.notiList_middle>table{
+  width: 100%;
+  border-top: 2px solid #377B62;
+  border-bottom: 1px solid #377B62 !important;
+  text-align: center;
+}
+.notiList_middle th{
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+.notiNum_cate{
+  width: 7%;
+}
+.notiName_wri{
+  width: 10%;
+}
+.notiDate_cate{
+  width: 11%;
+}
+.notiList_middle td{
+  padding: 20px 0;
+  vertical-align:middle;
+  border-top: 1px solid #DDDDDD;
+  
+}
+.noti_import{
+  width: 40px; height: 10px;
+  background-image: url(../img/국순당_icon_newslist.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 30px auto;
+}
+.noti_num{
+  font-size: 12px;
+  font-weight: 300;
+
+}
+.noti_title{
+  text-align: left;
+}
+.noti_title>a{
+  display: block;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  padding-left: 50px;
+}
+.noti_name{
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+}
+.noti_date{
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+}
+
+.noti_write{
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* notiList_bottom */
+.notiList_bottom{
+  width: 100%;
+}
+.noti_bot{
+  padding: 50px 0;
+  width: 15%;
+  min-width: 400px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.noti_bot_prev{
+  width: 15px; height: 18px;
+  background-image: url(../img/ico_pageFirst.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 15px auto;
+}
+.noti_bot_prev>a{
+  display: block;
+  width: 100%; height: 100%;
+}
+.noti_bot_next{
+  width: 15px; height: 18px;
+  background-image: url(../img/ico_pageLast.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 15px auto;
+}
+.noti_bot_next>a{
+  display: block;
+  width: 100%; height: 100%;
+}
+.noti_bot ul{
+  display: flex;
+  justify-content: space-between;
+}
+.noti_bot ul>li{
+  width: 30px; height: 30px;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+.noti_bot ul>li:hover{
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+}
+.noti_bot ul>li>a{
+  text-decoration: none;
+  text-align: center;
+  vertical-align:middle;
+  color: #000;
+ font-size: 16px;
+ font-weight: 300;
+}
+
+@media (max-width: 1000px) {
+  .notiList_top p{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .notiList_topCon{
+    width: 52%;
+  }
+}
+
+@media (max-width: 750px) {
+  .notiDate_cate{
+    width: 22%;
+  }
+  .noti_title>a{
+    display: block;
+    width: 280px;
+    text-overflow: ellipsis;     /* 생략 처리 ( ... )*/
+    white-space: nowrap;         /* 줄바꿈 하지 않고 잘림*/
+    overflow: hidden;            /* 스크롤 처리 하지 않음*/
+  }
+  .notiList_top{
+    width: 100%;
+  }
+}

@@ -1,0 +1,83 @@
+<!-- list_page -->
+<div id="notiList_wrap">
+  <h1 class="w1188">공지사항</h1>
+  <div class="notiList_top w1188">
+    <p id="result"></p>
+    <div class="notiList_topCon">
+    <select name="noti_cate">
+			<option value="제목">제목</option>
+			<option value="작성자">작성자</option>
+			<option value="내용">내용</option>
+		</select>
+    <input type="text" name="noti_search" id="noti_search" placeholder="검색어 입력">
+    <input type="submit" value="검색" id="noti_btn">
+    </div>
+    <div class="list_order">
+      <ul>
+          <li><a href="" class="notiNew_or">최신순</a></li>
+          <li><a href="" class="notiPast_or">과거순</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="notiList_middle w1188">
+    <table id="notiTable">
+      <thead>
+          <tr>
+               <th class="notiNum_cate">번호</th>
+               <th class="notiTitle_cate">제목</th>
+               <th class="notiName_wri">작성자</th>
+               <th class="notiDate_cate">날짜</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td class="noti_num noti_import"></td>
+               <td class="noti_title">
+                <a href="">백세고 百歲膏 출시</a>
+              </td>
+               <td class="noti_date">관리자</td>
+               <td class="noti_date">2022-01-07</td>
+          </tr>
+          <% rows.forEach((row,index) =>{ %> 
+            <% let regisYear =  row.create_time.getFullYear();  %>
+            <% let regisMonth =  row.create_time.getMonth()+1;  %>
+            <% let regisDate =  row.create_time.getDate();  %>
+    
+          <tr>
+              <td class="noti_num"><%= row.No %></td>
+               <td class="noti_title">
+                <a onclick="javascript:location.href='/newWritePage?No=<%= row.No %>'"><%= row.title %></a>
+              </td>
+               <td class="noti_name"><%= row.name %></td>
+               <td class="noti_date"><%= regisYear %>-<%= regisMonth +1 >= 10 ? regisMonth : '0' + regisMonth %>-<%= regisDate >= 10 ? regisDate : '0' + regisDate %></td>
+          </tr>
+          <% }); %>
+
+      </tbody>
+  </table>
+  <div class="noti_write">
+  <input type="button" value="작성" id="noti_btn" onclick="location.href='/write'">
+</div>
+  </div>
+  <div class="notiList_bottom">
+    <div class="noti_bot w1188">
+      <div class="noti_bot_prev"><a href=""></a></div>
+      <ul>
+        <li><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+        <li><a href="">6</a></li>
+        <li><a href="">7</a></li>
+        <li><a href="">8</a></li>
+        <li><a href="">9</a></li>
+        <li><a href="">10</a></li>
+      </ul>
+      <div class="noti_bot_next"><a href=""></a></div>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/noticeList.js"></script>
