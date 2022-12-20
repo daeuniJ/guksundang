@@ -1,5 +1,6 @@
 let app = require('../app');
-let port = 3000;
+let PORT = process.env.PORT || 3000;
 
-app.listen(port)
-// app.listen(process.env.PORT || port)
+app.listen(PORT, () => {
+    console.log(`express 실행 ${PORT}`);
+})

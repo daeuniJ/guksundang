@@ -6,6 +6,17 @@ var connection = mysql.createConnection({
   database : 'gsd',
   multipleStatements: true //다중쿼리용 설정
 });
+
+//두개 이상의 테이블을 한번에 조회하는 방법
+// function getNoti(callback) {
+//     connection.query('SELECT * FROM gsdnoti ORDER BY No desc;' + 'SELECT * FROM gsdnoti ORDER BY No desc;', (err, rows) => {
+//         let rows0 = rows[0]
+//         let rows1 = rows[1]
+        
+//         if(err) throw err;
+//         callback(rows0,rows1);
+//     })
+// }
  
 connection.connect(function(err) {
   if (err) throw err;
