@@ -1,9 +1,9 @@
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  host     : 'us-cdbr-east-06.cleardb.net',
-  user     : 'b0261eeed5a919',
-  password : 'aad0f409',
-  database : 'heroku_1af2098daa513ac',
+  host     : 'database-1.chl09dgpxexv.ap-northeast-1.rds.amazonaws.com',
+  user     : 'root',
+  password : '95052910',
+  database : 'gsd',
   multipleStatements: true //다중쿼리용 설정
 });
  
