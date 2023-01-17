@@ -98,7 +98,7 @@ router.post('/logInE', (req, res) => {
 
   db.logInCheck(id, pwd, (results) => {
     if(results.length>0) {
-      res.redirect('/');
+      res.send(`<script>alert("${id}님, 환영합니다!"); document.location.href="/";</script>`);
     } else {
       res.send(`<script>alert("로그인 정보가 일치하지 않습니다.");
       document.location.href="/log_in"</script>`)
@@ -204,7 +204,7 @@ router.get('/brand_intro',(req, res) => {
 const upload = multer({
   storage: multer.diskStorage({
     destination(req, file, done) {
-      done(null, 'public/uploads/'); //폴더에 저장공간을 만들어 준 것
+      done(null, '../public/uploads/'); //폴더에 저장공간을 만들어 준 것
     },
     filename(req, file, done) {
       const ext = path.extname(file.originalname); //파일의 확장자명을 뽑아내는 것
@@ -249,7 +249,7 @@ router.get('/bekseju_upDate',(req, res) => {
 
 router.post('/updatesPd', upload.single('product_img'), (req,res) => {
   let param = JSON.parse(JSON.stringify(req.body));
-  let img = 'uploads/' + req.file.filename;
+  let img = 'public/uploads/' + req.file.filename;
   let bekseju_name = param['product_name'];
   let price = param['product_price'];
   let id = param['id'];
