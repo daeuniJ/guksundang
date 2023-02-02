@@ -3,47 +3,13 @@ const router =  express.Router();
 const path = require('path');
 const db = require('./../db.js');
 const multer  = require('multer');
-const html = `<!doctype html>
-  <html>
-  <head>
-  <title>node HTML</title>
-  </head>
-  <body>
-  <h1>hello</h1>
-  <form action='/name' method='POST'>
-  <input type='text' name='name' placeholder='이름 작성하기'>
-  <button>확인</button>
-  </form>
-  </body>
-  </html>
-`;
-// router.get('/', function (req, res) {
-//   // Cookies that have not been signed
-//   console.log('Cookies: ', req.cookies)
-//   // Cookies that have been signed
-//   console.log('Signed Cookies: ', req.signedCookies)
-//   res.cookie('cookieKey','cookieValue',{ maxAge:600000, httpOnly: true });
-//   res.status(200).send('test');
-//   // maxAge - 쿠키의 수명을 밀리초로 나타냄
-//   // expire - 만료일자를 GMT방식의 시간으로
-//   // path - 해당 다랙토리와 하위 디렉토리에서만 경로가 활성화 됨
-//   // domain - 도메인 명
-//   // rescure - 웹브라우저와 웹서버가 https로 통신하는 경우에만 쿠키를 서버로 전송한다. https-보안을 위해 사용(s는 secure의 약자)
-//   // httpOnly - 웹서버를 통해서만 쿠키에 접근 가능. 자바스크립트로 쿠키에 접속을 방지
-//   // signed - 쿠키의 암호화를 결정
-// });
 
 
 router.get('/', (req, res) => {
-  //필요한 데이터 입력 칸
-  //res.send(html);
   res.render('main');
 });
-router.route('/name').post((req, res) => {  //chaining한다고도 함.
+router.route('/name').post((req, res) => { 
   let paramname = req.body.name;
-  //res.send는 res.writeHead(), res.write(), res.end()를 한 번에 해결
-  //res.send는 한 번만 사용 가능함. 여러 번 사용 불가능. 
-  //res.send는 두 번 이상 사용해도 출력되지 않고 무시해 버림
     res.send(`${paramname}님 반갑습니다.`);
     res.send('<br>안녕하세요');
   // res.writeHead(200, { 'content-type':'text/html;charset=utf-8' })

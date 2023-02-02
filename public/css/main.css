@@ -368,6 +368,7 @@ html, body{
     box-sizing: border-box;
     position: absolute;
     left: 0; bottom: 0;
+    cursor: pointer;
   }
   /* .order_con li:hover::after{
     border: 0;
