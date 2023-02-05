@@ -60,6 +60,14 @@
     text-decoration: none;
     color: #F4F4F4;
   }
+  .car{
+    display: block;
+    width: 23px; height: 23px;
+    background-image: url(../img/cart.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% auto;
+  }
   .fac{
     display: block;
     width: 23px; height: 23px;

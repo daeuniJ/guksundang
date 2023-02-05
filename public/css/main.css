@@ -1,7 +1,23 @@
 html, body{
     font-family: 'Noto Sans KR', sans-serif;
   }
-  
+  /* cart */
+  .cart_wrap{
+    position: fixed;
+    top: 50%;
+    right: 0;
+  }
+  .cart_btn{
+    display: block;
+    position: relative;
+    width: 80px;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #377B62;
+    color: #F4F4F4;
+  }
   /*common*/
   .w1188{
     width: 1188px;
