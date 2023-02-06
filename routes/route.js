@@ -236,4 +236,9 @@ router.get('/bekseju_delete',(req,res) => {
 
 //백세주 제품 페이지 끝
 
+//장바구니
+router.get('/cart', (req, res) => {
+  res.render('cart');
+});
+
 module.exports = router;

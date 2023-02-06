@@ -1,0 +1,10 @@
+.cart_wrap{
+    padding: 195px 0 140px;
+}
+.cart_tit>h1{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #377B62;
+    font-weight: 700;
+  }

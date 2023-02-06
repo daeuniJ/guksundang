@@ -96,7 +96,7 @@ select{
   padding: 20px 0;
   vertical-align:middle;
   border-top: 1px solid #DDDDDD;
-  
+  cursor: pointer;
 }
 .noti_import{
   width: 40px; height: 10px;
