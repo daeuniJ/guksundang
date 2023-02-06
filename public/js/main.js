@@ -100,7 +100,7 @@ let beverage_bg = document.querySelectorAll('.beverage_bg');
 // }
 
 
-/*main_5 오픈매장*/   //https://poiemaweb.com/css3-transition 참고해서 호버 해보기ㅜㅜ
+/*main_5 오픈매장*/   
 // <!-- Initialize Swiper -->
 var swiper = new Swiper(".mySwiper3", {
   slidesPerView: 4,
