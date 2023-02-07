@@ -563,8 +563,6 @@ html, body{
   
   /* 호버시 겹쳐지는 사진 */
   .s3_active{
-    /* display: block;
-    content: ''; */
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;

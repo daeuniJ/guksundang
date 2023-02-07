@@ -71,7 +71,6 @@ var swiper = new Swiper(".mySwiper2", {
 /*자세히보기 호버 시 사진bg & 버튼색 바꾸기 */
 let ms2_detail = document.querySelectorAll('.ms2_detail');
 let beverage_bg = document.querySelectorAll('.beverage_bg');
-// console.log(ms2_detail);
 
   for(let i=0; i<ms2_detail.length; i++) {
     ms2_detail[i].addEventListener('mouseenter', ()=>{
