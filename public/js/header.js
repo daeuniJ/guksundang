@@ -67,79 +67,21 @@ let m_lnb = document.querySelectorAll('.m_lnb');
 for(let i=0; i<m_navTitle.length; i++) {
   m_navTitle[i].addEventListener('click',()=> {
     m_navTitle[i].classList.toggle('mNav_active');
-    m_lnb[i].classList.toggle('m_lnb_active');
-
-
-
-//언니가 보내준 거
-// if(m_lnb[i].style.maxHeight){
-//   m_lnb[i].style.maxHeight = '0'
-// }else{
-//   let act = document.querySelectorAll('.m_lnb.lnb_toggle')
-
-
-//   for(j=0; j< act.length; j++){
-//       act[j].classList.remove('lnb_toggle')
-//   }
-
-//   m_lnb[i].classList.toggle('lnb_toggle');
-
-//   let mo_act = document.querySelectorAll('.mo_active')
-
-//   for(k=0; k<mo_act.length; k++){
-//       mo_act[k].classList.remove('mo_active')
-//   }
-//   mobile_title[i].classList.toggle('mo_active')
-// }
-
-
-
-
-
-
-
-
-
-    // m_lnb[i].style.maxHeight = 'fit-content';
-    // let next = this.nextElementSibling;  //nextElementSibling -> 선택한 태그의 다음 태그
-    // if(next.style.maxHeight) {
-    //   next.style.maxHeight = 'null';
-    // } else {
-    //   let act = document.querySelectorAll('.m_navTitle.mNav_active');
-    //   for(j = 0; j < act.length; j++) {
-    //     act[j].classList.remove('mNav_active')
-    //     act[j].nextElementSibling.style.maxHeight = '0';
-    //   }
-    //   this.classList.toggle('mNav_active');
-    //   next.style.maxHeight = 'fit-content';
-      
-    // }
-
-
+    let m_lnb = m_navTitle[i].nextElementSibling;
+    if(m_lnb.style.maxHeight){
+      m_lnb.style.maxHeight = null;
+    } else {
+      let act = document.querySelectorAll('.m_navTitle.mNav_active');
+      for(let j=0; j<act.length; j++){
+        act[j].classList.remove('mNav_active');
+        act[j].nextElementSibling.style.maxHeight = null;
+      }
+      m_navTitle[i].classList.add('mNav_active');
+      m_lnb.style.maxHeight = '500px';
+    }
   });
 }
 
 
 
-// for(let i=0; i<m_navTitle.length; i++) {
-//   m_navTitle[i].addEventListener('click',()=> {
-//     m_navTitle[i].classList.toggle('mNav_active');
-//     let next = this.nextElementSibling;  //nextElementSibling -> 선택한 태그의 다음 태그
-//     if(next.style.maxHeight) {
-//       next.style.maxHeight = 'null';
-//     } else {
-//       let act = document.querySelectorAll('.m_navTitle.mNav_active');
-//       for(j = 0; j < act.length; j++) {
-//         act[j].classList.remove('mNav_active')
-//         act[j].nextElementSibling.style.maxHeight = '0';
-//       }
-//       this.classList.toggle('mNav_active');
-//       next.style.maxHeight = 'fit-content';
-      
-//     }
-
-
-//   });
-// }
-
-
+// m_lnb[i].classList.toggle('m_lnb_active');

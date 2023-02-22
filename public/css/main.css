@@ -201,11 +201,7 @@ html, body{
     font-weight: 700;
     color: #377B62;
   }
-  .main2_txt>h1::after{
-    background-color: #377B62;
-  }
   .main_2 p{
-    color: #377B62;
     padding-bottom: 20px;
   }
   .main2_cont{
@@ -324,6 +320,7 @@ html, body{
   }
   .experi h1>span{
     font-weight: 700;
+    color: #377B62;
   }
   
   

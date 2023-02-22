@@ -95,7 +95,7 @@
     background-color: #377B62;
     opacity: 0.95;
     position: absolute;
-    top: 95px; left: 0;
+    top: 100px; left: 0;
     width: 100%; height: 0px ;
     transition-duration: 0.5s;
     z-index: 9 ;
@@ -110,7 +110,7 @@
     z-index: 3 ;
   } */
   #gnb>ul>li>a:hover{
-    width: 100%; height: 100%;
+    width: 100%; height: 50.5px;
     border-bottom: 3px solid #F4F4F4;
     box-sizing: border-box;
     font-weight: 500;
@@ -119,7 +119,7 @@
     width: 100%;
     height: 0;
     position: absolute;
-    top: 40px; left: 0;
+    top: 50px; left: 0;
     overflow: hidden;
     transition: height 0.5s;
     padding-top: 6px;
@@ -147,6 +147,7 @@
   #gnb>ul{
     /* height: 29px; */
     display: flex;
+    justify-content: space-between;
   }
   #gnb>ul>li{
     height: 45px;
@@ -338,7 +339,7 @@ text-align: left;
   background-color: #F4F4F4;
   max-height: 0;
   overflow: hidden;
-  opacity: 0;
+  opacity: 1;
   transition: max-height 0.5s ease-in-out;
 }
 .m_lnb.m_lnb_active{
